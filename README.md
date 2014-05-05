@@ -1,4 +1,4 @@
-# Node.js + REST Presentation 
+# Sample Teach Presentation 
 > A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
 
 ## View slides locally
@@ -19,8 +19,6 @@ $ grunt
 
 ### Pages
 * / - presentation
-* /hello - prints 'hello world'
-* /musicians - root of REST API
  
 ## Reference
 * [Express API Reference](http://expressjs.com/4x/api.html)
