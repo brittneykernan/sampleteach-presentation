@@ -143,7 +143,7 @@ html
               code.language-javascript.
                 for rollercoaster in universal_studios_coasters
                   // make sure you haven't had too much 
-                  if you.face_color == "green"
+                  if your_face_color == "green"
                     return;
                   ride(rollercoaster)
           li Break
@@ -163,17 +163,32 @@ html
         h2 Function
         pre 
           code.language-javascript.
-            function rideAllTheRides(rides) {
-              for (var i = 0; i < rides.length; i++) {
-                // make sure you haven't had too much 
-                if (you.faceColor == "green") {
-                  return false;
-                }
-                ride(rides[i]);
-              }
-              return true;
+            function greetUser(hour) {
+              if ( hour < 12 )
+                return "Good Morning";
+              else if ( hour < 16 )
+                return "Good Afternoon"
+              else 
+                return "Good Evening" 
             }
 
+      section(data-bespoke-state='statements')
+        h2 Program
+        pre 
+          code.language-javascript.
+            function greetUser(h) {
+              if ( h < 12 )
+                return "Good Morning";
+              else if ( h < 16 )
+                return "Good Afternoon"
+              else 
+                return "Good Evening" 
+            }
+
+            var day = new Date();
+            var hour = day.getHours();
+
+            var greeting = greetUser(hour);
       section(data-bespoke-state='operators')
         h2 Operators
         ul
@@ -226,7 +241,6 @@ html
                 var usbChargerCount = 1;
                 if( usbChargerCount <= 1 )
                   alert("Go buy a USB Charger"); 
-
       section(data-bespoke-state='operators')
         h2 Comparison
         ul
@@ -236,17 +250,16 @@ html
           li.bullet  
             pre 
               code.language-javascript.
-                if( wifi.state == "on" )
+                if( wifiState == "on" )
                   lookForNetworks()
                 else 
                   hideNetworkList()
                   
-                if( wifi.state == "off" )
+                if( wifiState == "off" )
                   hideNetworkList()
                   
-                if( wifi.state != "on" )
+                if( wifiState != "on" )
                   hideNetworkList()
-
       section(data-bespoke-state='operators')
         h2 Storage
         ul
@@ -307,7 +320,6 @@ html
                   turn_on_heater()
               if target_temperature <= current_temperature
                   turn_off_heater()
-
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code
         h3 How to write psuedo code
@@ -332,7 +344,6 @@ html
                   turn_on_heater()
               if target_temperature <= current_temperature
                   turn_off_heater()
-
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code Example
         h3 Task: Lock beer fridge until all timesheets are in
@@ -348,7 +359,6 @@ html
                   if all_timesheets_in
                     unlock beer fridge
                     exit
-
       section(data-bespoke-state='psuedo')
         h2 Questions
         h3 What should we revisit?
