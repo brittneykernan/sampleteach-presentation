@@ -114,24 +114,44 @@ html
         h2 Choices
         ul
           li If Else
+            pre 
+              code.language-javascript.
+                // wake up to music
+                if current_time == ( work_starts_time - 1hr )
+                  play_favorite_tune
+                ...
           li Switch
 
       section(data-bespoke-state='statements')
         h2 Repeats
         ul
           li For Loops
+            pre 
+              code.language-javascript.
+                walk_to(dog_park_location)
+                // look at all the dogs
+                for each dog in dogs_in_park
+                  admire(dog)
+                walk_to(home_location)
           li While Loops
 
       section(data-bespoke-state='statements')
         h2 Stops (and Continues)
         ul
           li Exit / Return
+            pre 
+              code.language-javascript.
+                for rollercoaster in universal_studios_coasters
+                  // make sure you haven't had too much 
+                  if you.face_color == "green"
+                    return;
+                  ride(rollercoaster)
           li Break
           li Continue
 
+      <!-- 
       section(data-bespoke-state='statements')
-        h2 Statements
-        h3 Blocks
+        h2 Blocks
         ul
           li.bullet
           li.bullet set of statements
@@ -139,37 +159,101 @@ html
           li.bullet functions - blocks that can be reused
           li.bullet indent statements inside other statements
 
+      section(data-bespoke-state='statements')
+        h2 Blocks
+        pre 
+          code.language-javascript.
+            function rideAllTheRides() {
+              for (var i = 0; i < universalStudiosCoasters.length; i++) {
+                // make sure you haven't had too much 
+                if (you.faceColor == "green") {
+                  return;
+                }
+                ride(universalStudiosCoasters[i]);
+              }
+            }
+      -->
+
+      section(data-bespoke-state='statements')
+        h2 Functions
+        ul
+          li.bullet
+          li.bullet are blocks the way a square is a rectangle
+          li.bullet have unique names
+          li.bullet 
+
       section(data-bespoke-state='operators')
         h2 Operators
         ul
           li.bullet
           li.bullet basic math
+          li.bullet Order of Operations 
           li.bullet many more, these are the foundations
 
       section(data-bespoke-state='operators')
-        h2 Operators
-        h3 Assignment 
+        h2 Assignment
         ul
           li.bullet
-          li.bullet =     
+          li.bullet = 
+          li.bullet  
+            pre 
+              code.language-javascript.
+                var todaysVibe = "rad";   
 
       section(data-bespoke-state='operators')
-        h2 Operators
-        h3 Math 
+        h2 Math
         ul
           li.bullet
           li.bullet + and -
+          li.bullet  
+            pre 
+              code.language-javascript.
+                // just one more
+                var coffeeToday = 3 + 1;   
           li.bullet * and /  
+          li.bullet  
+            pre 
+              code.language-javascript.
+                // split those half dozen donuts with me
+                var myTreats = 6/2;   
 
       section(data-bespoke-state='operators')
-        h2 Operators
-        h3 Comparison 
+        h2 Comparison
         ul
           li.bullet
           li.bullet > and >=
+          li.bullet  
+            pre 
+              code.language-javascript.
+                // true
+                cracked_phone_screen > no_phone_screen
           li.bullet < and <= 
+          li.bullet  
+            pre 
+              code.language-javascript.
+                var usbChargerCount = 1;
+                if( usbChargerCount <= 1 )
+                  alert("Go buy a USB Charger"); 
+
+      section(data-bespoke-state='operators')
+        h2 Comparison
+        ul
+          li.bullet
           li.bullet == equals
           li.bullet != not equals
+          li.bullet  
+            pre 
+              code.language-javascript.
+                if( wifi.state == "on" )
+                  lookForNetworks()
+                else 
+                  hideNetworkList()
+                  
+                if( wifi.state == "off" )
+                  hideNetworkList()
+                  
+                if( wifi.state != "on" )
+                  hideNetworkList()
 
       section(data-bespoke-state='operators')
         h2 Storage
@@ -178,6 +262,10 @@ html
           li.bullet variables store data for future reference
           li.bullet variables have unique names
           li.bullet assign data to variables with equals operator
+          li.bullet
+            pre 
+              code.language-javascript.
+                current_price = 4.95
 
       section(data-bespoke-state='operators')
         h2 Exceptions
@@ -186,6 +274,14 @@ html
           li.bullet errors
           li.bullet when something unintended occurs in the program
           li.bullet execution may halt
+          li.bullet
+            pre 
+              code.language-javascript.
+                function openMenu()
+                  $('#menu').slideDown()
+                }
+                // SyntaxError: Unexpected identifier
+                // missing { on the first line
 
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code
@@ -208,25 +304,64 @@ html
           li.bullet sum up mini tasks in functions
 
       section(data-bespoke-state='psuedo')
+        h2 Psuedo Code Example
+        h3 Task: Automate Window Shades
+        pre 
+          code.language-javascript.
+            repeat every 5 minutes
+              brightness = read_brightness()
+              if brightness >= 1
+                roll_down_shades()
+              else 
+                roll_up_shades()
+
+      section(data-bespoke-state='psuedo')
         h2 Psuedo Code
         h3 How to write psuedo code
         ul
           li.bullet
           li.bullet start with a complex task
           li.bullet identify the inputs and the outputs
-          li.bullet break it down into smaller tasks
           li.bullet write down the data you need into variables
+          li.bullet break it down into smaller tasks
           li.bullet turn 'hardware' interactions into functions
           li.bullet take a few passes through and simplify 
 
+      section(data-bespoke-state='psuedo')
+        h2 Psuedo Code Example
+        h3 Task: Automate Window Shades
+        pre 
+          code.language-javascript.
+            too_bright = 1
+            repeat every 5 minutes
+              brightness = read_brightness()
+              shade_state = get_shades_state
+              if brightness >= too_bright
+                if shade_state == "rolled_up" 
+                  roll_down_shades()
+              else 
+                if shade_state == "rolled_down"
+                  roll_up_shades()
 
+      section(data-bespoke-state='psuedo')
+        h2 Psuedo Code Example
+        h3 Task: Lock beer fridge until all timesheets are in
+        pre 
+          code.language-javascript.
+            if day is friday
+              if time is >= 4pm
+                repeat every 30 minutes
+                  all_timesheets_in = true
+                  for each employee in company 
+                    if timesheet != turned in 
+                      all_timesheets_in = false
+                  if all_timesheets_in
+                    unlock beer fridge
+                    exit
 
-
-
-
-
-
-
+       section(data-bespoke-state='psuedo')
+        h2 Psuedo Code Example
+        h3 Task: Lock beer fridge until all timesheets are in
 
     script(src="//use.typekit.net/eag8wad.js")
     // build:js scripts/scripts.js
