@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title REST with Node.js
+    title Control Flow
 
     // build:css styles/styles.css
     //- Check out 'src/bower_components/prism/themes/' for available themes
@@ -149,38 +149,30 @@ html
           li Break
           li Continue
 
-      <!-- 
-      section(data-bespoke-state='statements')
-        h2 Blocks
-        ul
-          li.bullet
-          li.bullet set of statements
-          li.bullet visibly sectioned from other code 
-          li.bullet functions - blocks that can be reused
-          li.bullet indent statements inside other statements
-
-      section(data-bespoke-state='statements')
-        h2 Blocks
-        pre 
-          code.language-javascript.
-            function rideAllTheRides() {
-              for (var i = 0; i < universalStudiosCoasters.length; i++) {
-                // make sure you haven't had too much 
-                if (you.faceColor == "green") {
-                  return;
-                }
-                ride(universalStudiosCoasters[i]);
-              }
-            }
-      -->
-
       section(data-bespoke-state='statements')
         h2 Functions
         ul
           li.bullet
-          li.bullet are blocks the way a square is a rectangle
-          li.bullet have unique names
-          li.bullet 
+          li.bullet group of statements
+          li.bullet performs a specific task
+          li.bullet reusable code
+          li.bullet uniquely named
+          li.bullet takes input and computes output
+
+      section(data-bespoke-state='statements')
+        h2 Function
+        pre 
+          code.language-javascript.
+            function rideAllTheRides(rides) {
+              for (var i = 0; i < rides.length; i++) {
+                // make sure you haven't had too much 
+                if (you.faceColor == "green") {
+                  return false;
+                }
+                ride(rides[i]);
+              }
+              return true;
+            }
 
       section(data-bespoke-state='operators')
         h2 Operators
@@ -305,15 +297,16 @@ html
 
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code Example
-        h3 Task: Automate Window Shades
+        h3 Task: Program a Thermostat
         pre 
           code.language-javascript.
-            repeat every 5 minutes
-              brightness = read_brightness()
-              if brightness >= 1
-                roll_down_shades()
-              else 
-                roll_up_shades()
+            target_temperature = get_desired_temperature()
+            repeat every second
+              current_temperature = get_sensor_reading()
+              if target_temperature > ( current_temperature + 5 )
+                  turn_on_heater()
+              if target_temperature <= current_temperature
+                  turn_off_heater()
 
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code
@@ -329,19 +322,16 @@ html
 
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code Example
-        h3 Task: Automate Window Shades
+        h3 Task: Program a Thermostat
         pre 
           code.language-javascript.
-            too_bright = 1
-            repeat every 5 minutes
-              brightness = read_brightness()
-              shade_state = get_shades_state
-              if brightness >= too_bright
-                if shade_state == "rolled_up" 
-                  roll_down_shades()
-              else 
-                if shade_state == "rolled_down"
-                  roll_up_shades()
+            target_temperature = get_desired_temperature()
+            repeat every second
+              current_temperature = get_sensor_reading()
+              if target_temperature > ( current_temperature + 5 )
+                  turn_on_heater()
+              if target_temperature <= current_temperature
+                  turn_off_heater()
 
       section(data-bespoke-state='psuedo')
         h2 Psuedo Code Example
@@ -359,9 +349,9 @@ html
                     unlock beer fridge
                     exit
 
-       section(data-bespoke-state='psuedo')
-        h2 Psuedo Code Example
-        h3 Task: Lock beer fridge until all timesheets are in
+      section(data-bespoke-state='psuedo')
+        h2 Questions
+        h3 What should we revisit?
 
     script(src="//use.typekit.net/eag8wad.js")
     // build:js scripts/scripts.js
