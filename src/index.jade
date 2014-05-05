@@ -1,0 +1,244 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title REST with Node.js
+
+    // build:css styles/styles.css
+    //- Check out 'src/bower_components/prism/themes/' for available themes
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    // endbuild
+
+  body
+
+    article
+
+      section(data-bespoke-state='title')
+        h1 Control Flow
+
+      section(data-bespoke-state='programming')
+        h2 What is a program?
+        ul
+          li.bullet
+          li.bullet A planned series of future events
+          li.bullet A sequence of instructions, written to perform a specific task with a computer
+
+      section(data-bespoke-state='programming')
+        h2 What is programming about?
+        ul
+          li.bullet
+          li.bullet telling the computer what you want it to do
+          li.bullet breaking complex tasks into small steps
+          li.bullet easy for the computer and human to read
+
+      section(data-bespoke-state='programming')
+        h2 Breaking down tasks
+        h3 Task: Make Gif out of movie clip    
+        pre
+          code.language-javascript.
+            1. get movie clip from directory
+            2. decode into single frames
+            3. create a new blank gif
+            4. insert frames in order
+            5. save gif data to directory
+
+      section(data-bespoke-state='programming')
+        h2 Code Readability  
+        pre
+          code.language-javascript.
+            // whoa, no idea what happens here?
+            x = y({p:z})
+
+            // readable and pass-off-able
+            var clip = read_from_directory({
+                path : '/path/to/movie.mov'
+              });
+      
+      section(data-bespoke-state='programming')
+        h2 How does a computer read a program?
+        ul
+          li.bullet
+          li.bullet from left to right, top to bottom
+          li.bullet executed sequentially
+          li.bullet human readable and written code, is translated into computer readable code
+
+      section(data-bespoke-state='programming')
+        h2 Human to Computer
+        h3 "HELLO" in binary
+        div.fullWidth.translation
+          div.floatLeft human code
+            pre
+              code.language-javascript.
+                print "HELLO";
+
+          div.floatLeft.middle translation
+            pre
+              code.language-javascript.
+                H is 01001000 
+                E is 01000101 
+                L is 01001100 
+                O is 01001111
+
+          div.floatLeft computer
+            pre
+              code.language-javascript.
+                010010000
+                100010101
+                001100010
+                011000100
+                1111
+
+      section(data-bespoke-state='programming')
+        h2 What is control Flow?
+        ul
+          li.bullet
+          li.bullet the order instructions are run
+          li.bullet statements are points on the code that control what is run next
+
+      section(data-bespoke-state='programming')
+        h2 Control Flow
+        img(src="img/goosebumps.png")
+        
+      
+      section(data-bespoke-state='statements')
+        h2 Statements
+        ul
+          li.bullet
+          li.bullet Choices - choices between two or more paths
+          li.bullet Repeat Loops - repeat a task until an outcome is achieved 
+          li.bullet Stops - stop a task 
+
+      section(data-bespoke-state='statements')
+        h2 Choices
+        ul
+          li If Else
+          li Switch
+
+      section(data-bespoke-state='statements')
+        h2 Repeats
+        ul
+          li For Loops
+          li While Loops
+
+      section(data-bespoke-state='statements')
+        h2 Stops (and Continues)
+        ul
+          li Exit / Return
+          li Break
+          li Continue
+
+      section(data-bespoke-state='statements')
+        h2 Statements
+        h3 Blocks
+        ul
+          li.bullet
+          li.bullet set of statements
+          li.bullet visibly sectioned from other code 
+          li.bullet functions - blocks that can be reused
+          li.bullet indent statements inside other statements
+
+      section(data-bespoke-state='operators')
+        h2 Operators
+        ul
+          li.bullet
+          li.bullet basic math
+          li.bullet many more, these are the foundations
+
+      section(data-bespoke-state='operators')
+        h2 Operators
+        h3 Assignment 
+        ul
+          li.bullet
+          li.bullet =     
+
+      section(data-bespoke-state='operators')
+        h2 Operators
+        h3 Math 
+        ul
+          li.bullet
+          li.bullet + and -
+          li.bullet * and /  
+
+      section(data-bespoke-state='operators')
+        h2 Operators
+        h3 Comparison 
+        ul
+          li.bullet
+          li.bullet > and >=
+          li.bullet < and <= 
+          li.bullet == equals
+          li.bullet != not equals
+
+      section(data-bespoke-state='operators')
+        h2 Storage
+        ul
+          li.bullet
+          li.bullet variables store data for future reference
+          li.bullet variables have unique names
+          li.bullet assign data to variables with equals operator
+
+      section(data-bespoke-state='operators')
+        h2 Exceptions
+        ul
+          li.bullet
+          li.bullet errors
+          li.bullet when something unintended occurs in the program
+          li.bullet execution may halt
+
+      section(data-bespoke-state='psuedo')
+        h2 Psuedo Code
+        ul
+          li.bullet
+          li.bullet shorthand code 
+          li.bullet outlines logic of program 
+          li.bullet used to understand control flow
+          li.bullet not in an actual language but
+          li.bullet uses conventions of actual languages
+
+      section(data-bespoke-state='psuedo')
+        h2 Psuedo Code
+        h3 Conventions
+        ul
+          li.bullet
+          li.bullet name variables and functions descriptively
+          li.bullet use operators 
+          li.bullet use statements and indention
+          li.bullet sum up mini tasks in functions
+
+      section(data-bespoke-state='psuedo')
+        h2 Psuedo Code
+        h3 How to write psuedo code
+        ul
+          li.bullet
+          li.bullet start with a complex task
+          li.bullet identify the inputs and the outputs
+          li.bullet break it down into smaller tasks
+          li.bullet write down the data you need into variables
+          li.bullet turn 'hardware' interactions into functions
+          li.bullet take a few passes through and simplify 
+
+
+
+
+
+
+
+
+
+
+    script(src="//use.typekit.net/eag8wad.js")
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/bespoke-forms/dist/bespoke-forms.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
