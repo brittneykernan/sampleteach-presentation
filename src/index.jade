@@ -91,7 +91,7 @@ html
                 1111
 
       section(data-bespoke-state='programming')
-        h2 What is control Flow?
+        h2 What is Control Flow?
         ul
           li.bullet
           li.bullet the order instructions are run
@@ -116,10 +116,12 @@ html
           li If Else
             pre 
               code.language-javascript.
-                // wake up to music
-                if current_time == ( work_starts_time - 1hr )
-                  play_favorite_tune
-                ...
+                // Pandora-like algorithm
+                if (liked == true) {
+                  flagSongAsReplayable()
+                  addSimilarSongs()
+                } else
+                  neverPlaySongAgain()
           li Switch
 
       section(data-bespoke-state='statements')
